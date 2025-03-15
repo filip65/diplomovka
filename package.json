@@ -2,7 +2,7 @@
   "name": "cost-controlling",
   "productName": "cost-controlling",
   "description": "Aplikácia pre nákladový controlling",
-  "version": "2.0.10",
+  "version": "1.0.7",
   "main": "./out/main/index.js",
   "author": "Aurel Holotňák and Filip Katušin",
   "homepage": "https://github.com/AurelHolotnak/Cost-Controlling#readme",
@@ -24,7 +24,8 @@
     "publish:win": "electron-builder --win --publish always",
     "publish:mac": "electron-builder --mac --publish always",
     "test": "jest",
-    "test:cov": "jest --coverage --watchAll"
+    "test:cov": "jest --coverage --watchAll",
+    "release": "npm run build && electron-builder --win --publish=always"
   },
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.1",
