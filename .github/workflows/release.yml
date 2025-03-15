@@ -10,14 +10,21 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: electronuserland/builder:wine
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
+
       - name: Install dependencies
         run: npm install
+
+      - name: Set WINEPREFIX
+        run: echo "export WINEPREFIX=/tmp/wine" >> $GITHUB_ENV
+
       - name: Run release script
         run: npm run release
