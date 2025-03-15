@@ -8,6 +8,8 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    container:
+      image: electronuserland/builder:wine
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
