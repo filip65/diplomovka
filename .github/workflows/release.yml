@@ -8,8 +8,14 @@ on:
 jobs:
   release:
     runs-on: windows-latest
+    environment: GH_TOKEN
+    permissions:
+      contents: read
 
     steps:
+      - name: Debug environment variables
+        run: env
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
