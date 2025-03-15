@@ -9,19 +9,19 @@ win:
       arch: x64
   icon: icon.png
 nsis:
-  artifactName: Nákladový-kontroling-v${version}-win.${ext}
+  artifactName: ${name}-v${version}-win.${ext}
   shortcutName: ${productName}
   uninstallDisplayName: ${productName}
   createDesktopShortcut: always
 mac:
-  artifactName: Nákladový-kontroling-v${version}-mac.${ext}
+  artifactName: ${name}-v${version}-mac.${ext}
   icon: icon.icns
 linux:
   target:
     - AppImage
     - deb
   icon: icon.png
-  artifactName: Nákladový-kontroling-v${version}-linux.${ext}
+  artifactName: ${name}-v${version}-linux.${ext}
   category: Utility
   desktop:
     Name: 'Nákladový kontroling'
