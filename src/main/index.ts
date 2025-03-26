@@ -59,19 +59,12 @@ const setupUpdater = () => {
       });
   });
 
-  // autoUpdater.on('error', () => {
-  //   dialog.showErrorBox(
-  //     'Chyba aktualizácie',
-  //     'Pri aktualizácii nastala chyba. Skontrolujte pripojenie na internet a skúste to znova.',
-  //   );
-  // });
-
-  autoUpdater.on('error', (error) => {
-    console.error('Update error:', error);
-
-    dialog.showErrorBox(
-      'Update Error',
-      `An error occurred while updating the application:\n\n${error.message || error.toString()}`,
+  autoUpdater.on('error', () => {
+      dialog.showErrorBox(
+        'Chyba aktualizácie',
+        'Pri aktualizácii nastala chyba. Skontrolujte pripojenie na internet a skúste to znova.',
+      );
+    });
     );
   });
 };
