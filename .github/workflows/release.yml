@@ -22,7 +22,7 @@ jobs:
 
       - name: Run tests
         run: npm test
-        
+
   build-linux:
     needs: testing
     runs-on: ubuntu-latest

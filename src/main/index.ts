@@ -60,11 +60,9 @@ const setupUpdater = () => {
   });
 
   autoUpdater.on('error', () => {
-      dialog.showErrorBox(
-        'Chyba aktualizácie',
-        'Pri aktualizácii nastala chyba. Skontrolujte pripojenie na internet a skúste to znova.',
-      );
-    });
+    dialog.showErrorBox(
+      'Chyba aktualizácie',
+      'Pri aktualizácii nastala chyba. Skontrolujte pripojenie na internet a skúste to znova.',
     );
   });
 };
